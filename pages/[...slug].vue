@@ -1,16 +1,16 @@
 <template>
   <main>
     <ContentDoc />
-    <PolitePopupDebugInfo/>
+    <PolitePopupDebugInfo />
   </main>
 </template>
 
 <script setup lang="ts">
 const route = useRoute();
 
-const { trigger, debugOptions } = usePolitePopup();
+const { trigger } = usePolitePopup();
 
-if (route.path === '/vue') {
+if (route.path === "/vue") {
   trigger();
 }
 </script>

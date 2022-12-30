@@ -1,16 +1,6 @@
 <template>
   <div
-    class="
-      fixed
-      z-50
-      left-0
-      top-0
-      p-4
-      rounded-md
-      shadow-lg
-      bg-slate-400
-      shadow-lg
-    "
+    class="fixed z-50 left-0 bottom-0 p-4 rounded-md shadow-lg bg-slate-400 shadow-lg"
   >
     <div class="flex gap-4">
       <div>
