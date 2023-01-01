@@ -1,7 +1,7 @@
 <template>
   <main>
     <ContentDoc />
-    <PolitePopupDebugInfo />
+    <PolitePopupDebugInfo v-if="route.path === '/vue'" />
   </main>
 </template>
 
