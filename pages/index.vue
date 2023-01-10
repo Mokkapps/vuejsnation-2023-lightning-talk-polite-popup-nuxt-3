@@ -42,7 +42,7 @@ onMounted(() => {
     </div>
   </Transition>
   <div v-if="showCookieBanner"
-    class="cookie-box absolute bg-black text-white p-4 rounded-md shadow-lg top-10 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+    class="cookie-box absolute bg-black text-white p-4 rounded-md shadow-lg top-20 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
   >
     <span @click="onCloseCookieBanner" class="absolute top-1 right-2 cursor-pointer">&#x2715</span>
     <span

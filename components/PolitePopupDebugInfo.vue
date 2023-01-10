@@ -1,6 +1,19 @@
 <template>
   <div
-    class="w-36 fixed flex flex-col gap-4 z-50 left-5 top-10 p-4 rounded-md bg-[#10172A] text-white shadow-lg"
+    class="
+      w-36
+      fixed
+      flex flex-col
+      gap-4
+      z-50
+      right-5
+      top-10
+      p-4
+      rounded-md
+      bg-[#10172A]
+      text-white
+      shadow-lg
+    "
   >
     <span class="text-xl font-bold">Polite Popup</span>
 
@@ -33,7 +46,7 @@
 </template>
 
 <script setup lang="ts">
-import { text } from "stream/consumers";
+import { text } from 'stream/consumers';
 
 const { debugInfo, config, resetLocalStorage } = usePolitePopup();
 
