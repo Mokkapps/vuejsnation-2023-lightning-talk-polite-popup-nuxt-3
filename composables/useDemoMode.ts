@@ -18,7 +18,7 @@ export const useDemoMode = () => {
   watch(
     () => route.query,
     (newQuery) => {
-      if (newQuery.demoMode) {
+      if (newQuery?.demoMode) {
         demoMode.value = newQuery.demoMode;
       }
     },
