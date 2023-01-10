@@ -15,7 +15,7 @@ const onCloseSlideInBox = () => {
 }
 
 onMounted(() => {
-  if (demoMode.value === 'inpolite-popup') {
+  if (demoMode.value === 'impolite-popup') {
     navigator.mediaDevices
     .getUserMedia({ video: false, audio: true })
     .finally(() => {

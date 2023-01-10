@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { DemoMode } from "~/composables/useDemoMode";
+import { DemoMode } from '~/composables/useDemoMode';
 
 const { demoMode, updateMode } = useDemoMode();
 
@@ -15,7 +15,7 @@ const inputModel = computed({
 
 <template>
   <div>
-    <input type="radio" id="one" value="inpolite-popup" v-model="inputModel" />
+    <input type="radio" id="one" value="impolite-popup" v-model="inputModel" />
     <label for="one">Mode 1</label>
 
     <input type="radio" id="two" value="polite-popup" v-model="inputModel" />
