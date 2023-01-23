@@ -32,10 +32,10 @@ onMounted(() => {
   <Transition name="slide-fade">
     <div
       v-if="showSlideInBox"
-      class="fixed max-w-sm z-50 right-0 bottom-0 md:right-5 md:bottom-5 p-4 rounded-md bg-black text-white shadow-lg"
+      class="fixed max-h-sm w-full z-50 left-0 top-0 p-4 rounded-md bg-gray-700 text-white shadow-lg"
     >
-      <div class="flex justify-center mb-2">
-        <span @click="onCloseSlideInBox" class="absolute top-1 right-2 cursor-pointer">&#x2715</span>
+      <div class="flex justify-center gap-4 mb-2">
+        <span @click="onCloseSlideInBox" class="absolute top-4 right-20 cursor-pointer">&#x2715</span>
         <img src="https://source.unsplash.com/pgTUIohxAs8" width="100" height="100"/>
         <span>Get suggestions for improving your content, targeting, and marketing automations to help you increase revenue.</span>
       </div>
