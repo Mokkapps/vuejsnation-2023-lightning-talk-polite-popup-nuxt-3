@@ -3,7 +3,7 @@ import {
   useTimeoutFn,
   useLocalStorage,
   useWindowSize,
-} from "@vueuse/core";
+} from '@vueuse/core';
 
 const config = {
   timeoutInMs: 6000,
@@ -21,14 +21,14 @@ const isToday = (date: Date): boolean => {
 };
 
 interface PolitePopupStorageDTO {
-  status: "unsubscribed" | "subscribed";
+  status: 'unsubscribed' | 'subscribed';
   seenCount: number;
   lastSeenAt: number;
 }
 
 export const usePolitePopup = () => {
-  const visible = useState("visible", () => false);
-  const readTimeElapsed = useState("read-time-elapsed", () => false);
+  const visible = useState('visible', () => false);
+  const readTimeElapsed = useState('read-time-elapsed', () => false);
 
   const { y: scrollYInPx } = useWindowScroll();
   const { height: windowHeight } = useWindowSize();
@@ -40,10 +40,9 @@ export const usePolitePopup = () => {
     }
     const documentScrollHeight = document.documentElement.scrollHeight;
     const trackLength = documentScrollHeight - windowHeight.value;
-    const percentageScrolled = Math.floor(
-      (scrollYInPx.value / trackLength) * 100
-    );
-    return percentageScrolled;
+    const scrollPercent = scrollYInPx.value / trackLength;
+    const scrollPercentRounded = Math.floor(scrollPercent * 100);
+    return scrollPercentRounded;
   });
 
   const { start } = useTimeoutFn(
@@ -55,9 +54,9 @@ export const usePolitePopup = () => {
   );
 
   const storedData: Ref<PolitePopupStorageDTO> = useLocalStorage(
-    "polite-popup",
+    'polite-popup',
     {
-      status: "unsubscribed",
+      status: 'unsubscribed',
       seenCount: 0,
       lastSeenAt: 0,
     }
@@ -79,7 +78,7 @@ export const usePolitePopup = () => {
 
   const resetLocalStorage = () => {
     storedData.value = {
-      status: "unsubscribed",
+      status: 'unsubscribed',
       seenCount: 0,
       lastSeenAt: 0,
     };
@@ -95,13 +94,13 @@ export const usePolitePopup = () => {
   };
 
   const setSubscribed = () => {
-    storedData.value.status = "subscribed";
+    storedData.value.status = 'subscribed';
   };
 
   watch(
     [readTimeElapsed, scrolledContent],
     ([newReadTimeElapsed, newScrolledContent]) => {
-      if (storedData.value.status === "subscribed") {
+      if (storedData.value.status === 'subscribed') {
         return;
       }
 

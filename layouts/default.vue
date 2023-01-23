@@ -5,7 +5,7 @@
       <NuxtLink to="/react" class="link">React</NuxtLink>
       <NuxtLink to="/vue" class="link">Vue</NuxtLink>
     </nav>
-    <div class="bg-white p-4 rounded-md shadow-md">
+    <div class="bg-[#E2DED0] p-4 rounded-md shadow-md">
       <slot />
     </div>
   </div>
@@ -13,7 +13,7 @@
 
 <style scoped>
 .link {
-  @apply text-black;
+  @apply text-[#E2DED0];
   @apply no-underline;
 }
 </style>

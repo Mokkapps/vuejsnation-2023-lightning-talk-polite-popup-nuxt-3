@@ -9,8 +9,8 @@
 
 <style>
 body {
-  background-color: rgb(249 250 251);
-  font-family: "Noto Sans", sans-serif;
+  @apply bg-[#4E4F50];
+  font-family: 'Noto Sans', sans-serif;
   @apply p-8;
 }
 
